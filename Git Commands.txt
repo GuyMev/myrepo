@@ -1,0 +1,59 @@
+- Install Git Bash: https://git-scm.com/downloads
+- Config Commands:
+	git --version					Display git version
+	git config --global user.name "<username>"	Set username once
+	git config --global user.email "<email>"	Set email once
+	git config --global --unset user.name		Unsets username once
+	git config --global --unset user.email		Unsets email once
+	git config <command>				Show Specific config command (e.g. user.email)
+	git config --list				List all config commands
+	git help <command>				Same
+	clear						Clear window
+	exit						Close window
+- Directories:
+	pwd						Show current directory
+	cd .. 						Go one directory up
+	cd /c/<dir1>/<dir2>				Change directory (must be / and not \)
+	ls						List files and folders in the current directory
+	ls -la						List also hidden files
+	git init					Initialize a new local Repository (in empty directory or a directory containing an existing project)
+- Staging & committing:
+	git add <file>					Add a file to the stage
+	git add <dir>					Add a directory to the stage
+	git add .					Add all files and directories to the stage
+	git commit -m "<msg>"				Commit the stage to the repository (-m = message)
+	git log						List commit history
+	git log -<n>					List last n commits
+	git log --oneline				List commit history in one line
+	git log --oneline -<n>				List last n commit history in one line
+	git log --pretty=format:"%an, %h, %s"		List commit history formatted (%an = username, %h = commit id, %s = commit message)
+	git status					List file changes between local files and stage or stage and repository
+	git diff					List code changes between local files and stage
+	git diff --staged				List code changes between stage and commit
+	rm <file>					Remove a file from disk but not from stage or commit
+	git rm <file>					Remove a file from disk and from stage, but not from commit
+	mv <file>					Move (or rename) a file in disk but not in stage or commit
+	git mv <file>					Move (or rename) a file in disk and in stage, but not in commit
+	git clean -f					Delete all untracked files from disk (f = force)
+	git reset head					Unstage all files
+	git reset head <file>				Unstage a file
+	git reset --hard				Revert local files to last commit
+	git tag <tag-name>				Tag the last commit
+	git tag -a <tag-name> -m "<msg>"		Tag the last commit with date record, message and more (-a = annotated)
+	git tag						List all tags
+	git checkout <tag-name>				Checkout to that tag
+	git checkout <commit-id>			Checkout to that commit
+	git checkout master				Checkout to master
+	git checkout -- <file>				Restore a file from last commit into the disk
+	git checkout <commit-id> -- <file>		Add a file from that commit to current commit
+	git branch					List all branches
+	git branch <branch-name>			Create a new branch (but not checkout to it)
+	git checkout <branch-name>			Checkout to that branch
+	git checkout -b <branch-name>			Create a new branch + Checkout to it
+	git merge-base <branch-name1> <branch-name2>	Shows commit id of the most recent shared commit between thows branches 
+- GitHub:
+	git remote add <push-name> <rep-address>	Connect local repository to GitHub
+	git push <push-name> <branch-name>		Push local branch-name to GitHub
+	git push					Continue pushing to GitHub repository
+	git pull					Pull project to local repository
+	git clone <rep-address>				Clone GitHub repository to some current directory
