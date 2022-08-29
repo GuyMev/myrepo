@@ -1,3 +1,3 @@
-function foo2() {
+function foo3()
     return '';
 }
